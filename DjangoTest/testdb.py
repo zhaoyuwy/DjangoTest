@@ -6,7 +6,13 @@ from TestModel.models import Test
 
 
 # 数据库操作
-def testdb(request):
+def testSavedb(request):
+    test1 = Test(name='runoob')
+    test1.save()
+    return HttpResponse("<p>数据添加成功！</p>")
+
+# 数据库操作
+def testfinddb(request):
     # 初始化
     response = ""
     response1 = ""
@@ -15,10 +21,10 @@ def testdb(request):
     list = Test.objects.all()
 
     # filter相当于SQL中的WHERE，可设置条件过滤结果
-    response2 = Test.objects.filter(id=1)
+    # response2 = Test.objects.filter(id=1)
 
     # 获取单个对象
-    response3 = Test.objects.get(id=1)
+    # response3 = Test.objects.get(id=1)
 
     # 限制返回的数据 相当于 SQL 中的 OFFSET 0 LIMIT 2;
     Test.objects.order_by('name')[0:2]
