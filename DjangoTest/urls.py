@@ -22,4 +22,6 @@ urlpatterns = [
     # url(r'^$', view.hello),
     url(r'^hello$', view.hello),
     url(r'^testdb$', testdb.testdb),
+    url(r'^testModifyDb', testdb.testModifyDb),
+    url(r'^testDelete', testdb.testDelete),
 ]
