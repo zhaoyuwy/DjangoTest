@@ -22,3 +22,6 @@ Password:
 Password (again):
 Superuser created successfully.
 [root@solar HelloWorld]#
+
+test增加 test3.py
+python manage.py  test TestModel.test3.MyTest.test_case
